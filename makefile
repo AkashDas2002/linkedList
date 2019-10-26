@@ -1,11 +1,11 @@
-all: dwstring.o main.o
-	gcc -o program dwstring.o main.o
-
-dwstring.o: dwstring.c dwstring.h
-	gcc -c dwstring.c
+all: main.o functions.o
+	gcc -o program main.o functions.o
 
 main.o: main.c headers.h
 	gcc -c main.c
+
+functions.o: functions.c headers.h
+	gcc -c functions.c
 
 run:
 	./program
