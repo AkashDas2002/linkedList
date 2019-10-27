@@ -27,12 +27,16 @@ struct node * remove_node(struct node * front, int data) {
   struct node *previous = front;
   struct node *current = front->next;
   if(front->i == data) {
+    free(front);
+    front = NULL;
     return current;
   }
 
   while(current != NULL){
     if(current->i == data) {
       previous->next = current->next;
+      free(current);
+      current = NULL;
       return front;
     }
     previous = current;
