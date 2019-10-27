@@ -14,8 +14,8 @@ int main() {
     print_list(anode);
   }
   printf("\n");
-  printf("Removing 5\n");
-  anode = remove_node(anode, 5);
+  printf("Removing 4\n");
+  anode = remove_node(anode, 4);
   print_list(anode);
 
   printf("Removing 9\n");
